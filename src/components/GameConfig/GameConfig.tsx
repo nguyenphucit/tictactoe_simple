@@ -19,36 +19,32 @@ const GameConfigScreen: React.FC<GameConfigProps> = ({
         <h1><img src={XIcon} alt=""/> Game config <img src={OIcon}  alt=""/> </h1>
         
         <div className="input-group">
-          <label>
-            Board size: 
-            <input
-              type="number"
-              min="3"
-              max="10"
-              value={config.boardSize}
-              onChange={(e) => onConfigChange({
-                ...config,
-                boardSize: Math.max(3, Math.min(10, parseInt(e.target.value) || 3))
-              })}
-            />
-          </label>
-        </div>
+  <label>
+    Board size: 
+    <input
+      type="text"
+      value={config.boardSize}
+      onChange={(e) => onConfigChange({
+        ...config,
+        boardSize: parseInt(e.target.value) || 0
+      })}
+    />
+  </label>
+</div>
 
-        <div className="input-group">
-          <label>
-            Winning point: 
-            <input
-              type="number"
-              min="3"
-              max={config.boardSize}
-              value={config.winCondition}
-              onChange={(e) => onConfigChange({
-                ...config,
-                winCondition: Math.max(3, Math.min(config.boardSize, parseInt(e.target.value) || 3))
-              })}
-            />
-          </label>
-        </div>
+<div className="input-group">
+  <label>
+    Winning point: 
+    <input
+      type="text"
+      value={config.winCondition}
+      onChange={(e) => onConfigChange({
+        ...config,
+        winCondition: parseInt(e.target.value) || 0
+      })}
+    />
+  </label>
+</div>
 
         <button className="btn_Start" onClick={onStartGame}>
           Game Start

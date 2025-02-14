@@ -24,6 +24,18 @@ const TicTacToe: React.FC = () => {
   });
   const [winningCells, setWinningCells] = useState<[number, number][]>([]);
   const startNewGame = () => {
+    // Kiểm tra board size
+    if (config.boardSize < 3 || config.boardSize > 10) {
+      alert('Kích thước bàn cờ phải từ 3x3 đến 10x10!');
+      return;
+    }
+  
+    // Kiểm tra winning condition
+    if (config.winCondition < 3) {
+      alert('Số quân để thắng phải từ 3 trở lên!');
+      return;
+    }
+  
     if (config.winCondition > config.boardSize) {
       alert('Số quân để thắng không thể lớn hơn kích thước bàn cờ!');
       return;
@@ -34,7 +46,7 @@ const TicTacToe: React.FC = () => {
     setCurrentPlayer('X');
     setWinner(null);
     setGameStarted(true);
-    setWinningCells([])
+    setWinningCells([]);
   };
 
 
