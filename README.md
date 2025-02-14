@@ -41,8 +41,8 @@ To set up and run the project, follow these steps:
 ### 1. Clone the Repository
 
 ```sh
-git clone [repository-url]
-cd tic-tac-toe
+git clone https://github.com/nguyenphucit/tictactoe_simple.git
+cd tictactoe_simple
 ```
 
 ### 2. Install Dependencies
