@@ -25,12 +25,12 @@ const GameStatus: React.FC<GameStatusProps> = ({
         <div className="header-logo"><img src={XIcon} alt=""/> <img src={OIcon} alt=""/></div>
         <div className="current-player">
           <div className={`current-play-box ${winner ? 'win':''}`}>
-          <img 
+          {winner!=="Draw"?<img 
             src={currentPlayer === 'X' ? XIcon : OIcon} 
             alt={currentPlayer}
             className="player-icon"
-          />
-          {winner ?"WON": "TURN"}
+          />:null}
+          {winner ? (winner === "Draw" ? "DRAW" : "WON")  : "TURN"}
           </div>
         </div>
         <div className="button-group">
