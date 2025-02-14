@@ -1,0 +1,100 @@
+/* Game screen styles */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .header-logo>img{
+      width: 25px;
+      height: 25px;
+  }
+  
+  .current-player {
+    font-size: 1rem;
+    display: flex;
+    gap:4px;
+    justify-content: center;
+    align-items: center;
+    color:#a8bec7;
+    font-weight: bold;
+  }
+  
+  .header-logo{
+      flex:1
+  }
+  
+  .player-icon{
+      width: 15px;
+      height: 15px;
+  }
+  .current-player{
+      flex:1;
+  }
+  .current-play-box{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f3540;
+    outline:none;
+    border:none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    gap:5px;
+    font-size:15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .button-group{
+      flex:1;
+      display:flex;
+      justify-content: flex-end;
+      gap:5px;
+      
+  }
+  .button-group>button{
+     background-color:#a8bec7 ;
+      border:none;
+      outline:none;
+      border-radius: 5px;
+      padding: 0 2px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      cursor: pointer;
+  }
+
+  .button-group>button:hover{
+    translate:0 1px;
+    transform: scale(1.1,1.1);
+ }
+
+  .player-icon,
+  .winner-icon {
+    width: min(15px, 4vw);
+    height: min(15px, 4vw);
+    object-fit: contain;
+  }
+
+  .current-play-box.win {
+    background-color: #2f4d3d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(76, 175, 80, 0.3) 0px -3px 0px inset;
+    animation: highlight 0.5s ease-out;
+  }
+  
+  @keyframes highlight {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

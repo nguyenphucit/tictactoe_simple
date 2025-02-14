@@ -1,0 +1,94 @@
+.game-container {
+    background: transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 95%;
+    max-width: 700px;
+  }
+  
+  /* Board Container */
+  .game-board {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.25rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%; /* Sử dụng toàn bộ chiều rộng có sẵn */
+    max-width: 500px; /* Giới hạn kích thước tối đa */
+    background: transparent;
+  }
+  
+  /* Cell styles */
+  .cell {
+    aspect-ratio: 1; /* Giữ tỷ lệ 1:1 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 4vw, 2rem); /* Font size tương đối */
+    font-weight: bold;
+    background: #1f3540;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 8%; /* Padding tương đối */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  /* Icon styles */
+  .cell-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: pop 0.3s ease-out;
+  }
+
+  @media (max-width: 640px) {
+    .game-container {
+      padding: 0.5rem;
+    }
+  
+    .game-board {
+      padding: 0.5rem;
+      gap: 0.25rem;
+    }
+  
+    .cell {
+      padding: 15%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .game-container {
+      padding: 0.25rem;
+    }
+  
+    .game-board {
+      padding: 0.25rem;
+      gap: 0.2rem;
+    }
+  }
+  .cell.winning-cell {
+    background: #2f4d3d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(76, 175, 80, 0.3) 0px -3px 0px inset;
+    animation: highlight 0.5s ease-out;
+  }
+  
+  @keyframes highlight {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

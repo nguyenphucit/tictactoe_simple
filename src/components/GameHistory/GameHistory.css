@@ -1,0 +1,35 @@
+.history-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.player-stat,.draw-stat{
+    border:none;
+    outline:none;
+    padding:5px 25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color:#9aaeb5 ;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+  
+  .history-icon {
+    width: min(20px, 5vw);
+    height: min(20px, 5vw);
+    object-fit: contain;
+  }
+
+  @media (max-width: 640px) {
+    .player-stat,.draw-stat{
+        padding:5px 20px;
+        
+    }
+  }

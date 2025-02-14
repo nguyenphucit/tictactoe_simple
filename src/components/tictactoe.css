@@ -1,0 +1,10 @@
+.game-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #192a32;
+    padding: 1rem;
+  }
+
+  

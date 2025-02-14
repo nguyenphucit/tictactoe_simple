@@ -1,0 +1,68 @@
+.config-screen > .config-container > h1 > img {
+    weight: 30px;
+    height: 30px;
+  }
+.config-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #192a32;
+    padding: 1rem;
+}
+.config-container {
+    display: flex;
+    flex-direction: column;
+    background: #1f3540;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+  }
+.input-group {
+    margin-bottom: 1rem;
+    color: #a8bec9;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  .btn_Start {
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #ff615f;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: #192a32;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .btn_Start:hover{
+      translate: 0 3px;
+      box-shadow: none;
+  }
+
+  .config-container>h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    color:#a8bec9;
+  }

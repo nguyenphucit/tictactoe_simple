@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Tic-Tac-Toe Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A customizable Tic-Tac-Toe game built with React and TypeScript.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before getting started, ensure you have the following installed on your system:
 
-### `npm start`
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The project follows the structure below:
 
-### `npm test`
+```
+src/
+  ├── assets/         # Contains X_icon and O_icon images
+  ├── components/     # React components
+  │   ├── GameBoard/  # Main game board logic
+  │   ├── GameConfig/ # Game settings and customization
+  │   ├── GameHistory/# Tracks past games
+  │   └── GameStatus/ # Displays current game status
+  ├── types/         # Type definitions
+  ├── utils/         # Utility functions
+  └── App.tsx       # Root component
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Customizable board size (supports 3x3 and larger grids)
+- Adjustable winning conditions
+- Tracks win/loss/draw history within a session
+- User-friendly interface
+- Responsive design for various screen sizes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up and run the project, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the Repository
 
-### `npm run eject`
+```sh
+git clone [repository-url]
+cd tic-tac-toe
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2. Install Dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3. Start the Application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run the app in development mode:
 
-## Learn More
+```sh
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will open `http://localhost:3000` in your browser.
+The page will reload automatically when you make changes to the source code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+
+Contributions are welcome! Feel free to submit issues or create pull requests to improve the project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Happy coding! 🎮
