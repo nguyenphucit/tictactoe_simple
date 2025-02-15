@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './GameHistory.css'
 const XIcon = require('../../assets/X_icon.png');
 const OIcon = require('../../assets/O_icon.png');
@@ -9,7 +9,7 @@ interface GameHistoryProps {
   draws: number;
 }
 
-const GameHistory: React.FC<GameHistoryProps> = ({ xWins, oWins, draws }) => {
+const GameHistory: React.FC<GameHistoryProps> = memo(({ xWins, oWins, draws }) => {
   return (
     <div className="game-history">
       <div className="history-stats">
@@ -28,6 +28,6 @@ const GameHistory: React.FC<GameHistoryProps> = ({ xWins, oWins, draws }) => {
       </div>
     </div>
   );
-};
+});
 
 export default GameHistory;

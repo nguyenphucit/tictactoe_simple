@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { CellValue } from '../../types';
 import './GameBoard.css'
 const XIcon = require('../../assets/X_icon.png');
@@ -12,7 +12,7 @@ interface GameBoardProps {
   winningCells: [number, number][];
 }
 
-const GameBoard: React.FC<GameBoardProps> = ({
+const GameBoard: React.FC<GameBoardProps> = memo(({
   board,
   boardSize,
   onCellClick,
@@ -50,6 +50,6 @@ const GameBoard: React.FC<GameBoardProps> = ({
       ))}
     </div>
   );
-};
+});
 
 export default GameBoard

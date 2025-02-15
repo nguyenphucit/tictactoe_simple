@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Player } from '../../types';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -13,7 +13,7 @@ interface GameStatusProps {
   onConfigChange: () => void;
 }
 
-const GameStatus: React.FC<GameStatusProps> = ({
+const GameStatus: React.FC<GameStatusProps> = memo(({
   currentPlayer,
   winner,
   onRestart,
@@ -45,6 +45,6 @@ const GameStatus: React.FC<GameStatusProps> = ({
 
     </>
   );
-};
+});
 
 export default GameStatus;

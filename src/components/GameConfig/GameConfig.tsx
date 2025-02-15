@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { GameConfig } from '../../types';
 import './GameConfig.css'
 const XIcon = require('../../assets/X_icon.png');
@@ -8,7 +8,7 @@ interface GameConfigProps {
   onConfigChange: (config: GameConfig) => void;
   onStartGame: () => void;
 }
-const GameConfigScreen: React.FC<GameConfigProps> = ({ 
+const GameConfigScreen: React.FC<GameConfigProps> = memo(({ 
   config, 
   onConfigChange, 
   onStartGame 
@@ -52,6 +52,6 @@ const GameConfigScreen: React.FC<GameConfigProps> = ({
       </div>
     </div>
   );
-};
+});
 
 export default GameConfigScreen;

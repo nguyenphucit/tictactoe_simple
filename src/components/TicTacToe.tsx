@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useCallback, useState} from 'react';
 import GameConfigScreen from './GameConfig/GameConfig.tsx';
 import GameBoard from './GameBoard/GameBoard.tsx';
 import GameStatus from './GameStatus/GameStatus.tsx';
@@ -23,21 +23,21 @@ const TicTacToe: React.FC = () => {
     draws: 0
   });
   const [winningCells, setWinningCells] = useState<[number, number][]>([]);
-  const startNewGame = () => {
-    // Kiểm tra board size
+  const startNewGame = useCallback(() => {
+
     if (config.boardSize < 3 || config.boardSize > 10) {
-      alert('Kích thước bàn cờ phải từ 3x3 đến 10x10!');
+      alert('Board size must in range between 3 and 10!');
       return;
     }
   
-    // Kiểm tra winning condition
+
     if (config.winCondition < 3) {
-      alert('Số quân để thắng phải từ 3 trở lên!');
+      alert('The number of points to win must be 3 or more!');
       return;
     }
   
     if (config.winCondition > config.boardSize) {
-      alert('Số quân để thắng không thể lớn hơn kích thước bàn cờ!');
+      alert('Winning Points can not be bigger than Board size!');
       return;
     }
     
@@ -47,10 +47,10 @@ const TicTacToe: React.FC = () => {
     setWinner(null);
     setGameStarted(true);
     setWinningCells([]);
-  };
+  },[config.boardSize,config.winCondition]);
 
 
-  const handleMove = (row: number, col: number) => {
+  const handleMove = useCallback((row: number, col: number) => {
     if (board[row][col] || winner) return;
   
     const newBoard = board.map(r => [...r]);
@@ -81,17 +81,17 @@ const TicTacToe: React.FC = () => {
     }
   
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
-  };
+  },[board, winner, currentPlayer, config.winCondition]);
   
 
-  const handleConfigChange = () => {
+  const handleConfigChange = useCallback(() => {
     setGameStarted(false);
     setGameHistory({
       xWins: 0,
       oWins: 0,
       draws: 0
     });
-  };
+  },[]);
 
   if (!gameStarted) {
     return (
