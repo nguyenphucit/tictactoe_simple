@@ -71,7 +71,7 @@ docker pull nguyenphuc142002/tic-tac-toe-app:latest
 ### **2. Run the Container**
 
 ```sh
-docker run -p 3000:3000 nguyenphuc142002/tic-tac-toe-app
+docker run -p 3000:80 nguyenphuc142002/tic-tac-toe-app
 ```
 
 Now, open **http://localhost:3000** in your browser to start playing!
