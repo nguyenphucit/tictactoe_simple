@@ -81,7 +81,7 @@ Now, open **http://localhost:3000** in your browser to start playing!
 If you want to run the container in the background:
 
 ```sh
-docker run -d -p 3000:3000 nguyenphuc142002/tic-tac-toe-app
+docker run -d -p 3000:80 nguyenphuc142002/tic-tac-toe-app
 ```
 
 To stop the container, first find its container ID:
