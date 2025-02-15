@@ -32,21 +32,13 @@
     outline: none;
     cursor: pointer;
     transition: all 0.2s;
-    padding: 8%; /* Padding tương đối */
+    padding: 8%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
-  @media (hover: hover) {
-    .cell:hover {
-      transform: scale(1.015);
-    }
-  }
-  
-  .cell:active {
-    transform: scale(1);
-  }
-  /* Icon styles */
+
+
   .cell-icon {
     width: 100%;
     height: 100%;
